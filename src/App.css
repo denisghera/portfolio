@@ -2,7 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: "Odibee Sans", sans-serif;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   color: white;
   background-image: url(../public/mountains.jpg);
   background-repeat: no-repeat;
@@ -15,4 +15,33 @@ a:visited {
 
 h1 {
   font-size: 7vw;
+}
+
+h1, h2 {
+  text-shadow: 3px 3px black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+  background: linear-gradient(#ffffff71,#ffffff2a,#ffffff0e);
+}
+
+.btn, .logo {
+  margin-right: 5vw;
+  text-decoration: none;
+  font-size: 2.5vw;
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+  text-shadow: 2px 2px black;
+}
+
+.btn:hover, .logo:hover {
+  transform: scale(1.07);
+}
+
+.btn:active {
+  color: #aaaaaa;
 }
