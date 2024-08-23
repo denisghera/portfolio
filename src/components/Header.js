@@ -8,7 +8,7 @@ function Header() {
     <header className="header">
       <div style={{marginLeft:"5vw"}}>
         <Link to="/portfolio">
-          <img src="public\logo512.png" alt="logo" className="logo" />
+          <img src="/logo512.png" alt="logo" className="logo" />
         </Link>
       </div>
       <nav>
