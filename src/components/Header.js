@@ -11,9 +11,9 @@ function Header() {
         </Link>
       </div>
       <nav>
-        <Link to="/about" className='btn'>About</Link>
-        <Link to="/projects" className='btn'>Projects</Link>
-        <Link to="/contact" className='btn'>Contact</Link>
+        <Link to="/about" className='head-btn'>About</Link>
+        <Link to="/projects" className='head-btn'>Projects</Link>
+        <Link to="/contact" className='head-btn'>Contact</Link>
       </nav>
     </header>
   );
