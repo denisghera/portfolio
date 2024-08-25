@@ -5,7 +5,7 @@ function Home() {
     <div className="container">
         <div className="content">
           <h1 style={{marginTop:"7vw", textAlign:"center"}}>Hi, I'm<br/>Denis Ghera</h1>
-          <center><h2 style={{marginTop:"7vw"}}>Computer Science Student / Software Developer</h2></center>
+          <center><h2>Computer Science Student / Software Developer</h2></center>
         </div>
     </div>
   );

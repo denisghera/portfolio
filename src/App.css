@@ -19,8 +19,16 @@ h1 {
   font-size: 7vw;
 }
 
-h1, h2 {
+h1, h2, span{
   text-shadow: 3px 3px black;
+}
+
+h2 {
+  margin-top: 7vw;
+}
+
+span {
+  font-size: 4vw;
 }
 
 .header {
@@ -40,10 +48,88 @@ h1, h2 {
   text-shadow: 2px 2px black;
 }
 
+.logo img {
+  width: 5vw;
+}
+
 .head-btn:hover, .logo:hover {
   transform: scale(1.07);
 }
 
 .head-btn:active {
   color: #acacac;
+}
+
+.contact {
+  width: 5vw;
+  margin-right: 1vw; 
+}
+
+.resume-img {
+  width: 25vw;
+}
+
+.click-img {
+  position: absolute;
+  top: 3%;
+  right: 7%;
+  width: 15%;
+  transform: translate(20%, -20%) rotate(-30deg);
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20vw;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 8vw;
+    margin-top: 16vw;
+  }
+
+  .contact {
+    width: 10vw;
+  }
+
+  span {
+    font-size: 8vw;
+    margin-left: 3vw;
+  }
+
+  .resume-img {
+    margin-top: 10vw;
+    width: 80vw;
+  }  
+
+  .click-img {
+    top: 11%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+  }
+
+  .head-btn{
+    font-size: 7vw;
+    margin-right: 3.5vw;
+    margin-left: 5.5vw;
+  }
+
+  .logo img {
+    width: 10vw;
+    margin-bottom: 2vw;
+  }
+
+  .container {
+    padding: 5vw;
+  }
+
+  .content {
+    text-align: center;
+    margin-top: 5vw;
+  }
 }
