@@ -11,7 +11,7 @@ function Contact() {
         about the latest CVE, my inbox is open. I'll do my best to get back to you.
       </p>
       
-      <a href="mailto:hello@example.com" className="email-button">
+      <a href="mailto:denisghera@yahoo.com" className="email-button">
         Drop a message
       </a>
 
