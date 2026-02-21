@@ -1,32 +1,32 @@
 import React from 'react';
-import resume from "../images/resume.png";
-import mail from "../images/mail.png";
-import phone from "../images/phone.png";
-import clickHere from "../images/click-here.png"
+import './Contact.css';
 
 function Contact() {
   return (
-    <div className="container">
-      <div className="row" style={{ marginTop: "3%" }}>
-        <div className="col-md-6 col-sm-12">
-          <h1>Contact me</h1>
-          <div className="d-flex align-items-center mb-2" style={{marginTop:"8vw"}}>
-            <img src={mail} alt="mail" className="contact"/>
-            <span>denisghera@yahoo.com</span>
-          </div>
-          <div className="d-flex align-items-center">
-            <img src={phone} alt="phone" className="contact"/>
-            <span>+40733380155</span>
-          </div>
-        </div>
-        <div className="col-md-6 col-sm-12 d-flex justify-content-center">
-        <a href={resume} style={{ position: 'relative', display: 'inline-block' }}>
-          <img src={resume} alt="resume" className="resume-img" />
-          <img src={clickHere} alt="click here" className ="click-img"/>
-        </a>
-        </div>
+    <section id="contact" className="contact-container">
+      <h2 className="contact-title">Initiate Handshake</h2>
+      
+      <p className="contact-text">
+        Whether you have a question, a potential role, or just want to talk 
+        about the latest CVE, my inbox is open. I'll do my best to get back to you.
+      </p>
+      
+      <a href="mailto:hello@example.com" className="email-button">
+        Drop a message
+      </a>
+
+      <div className="social-links">
+        <a href="https://github.com/denisghera" target="_blank" rel="noreferrer">GitHub</a>
+        <span className="separator">//</span>
+        <a href="https://www.linkedin.com/in/denisghera/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <span className="separator">//</span>
+        <a href="https://app.hackthebox.com/users/2491775" target="_blank" rel="noreferrer">Hack The Box</a>
       </div>
-    </div>
+
+      <footer className="footer-bottom">
+        <p>Built by Denis &copy; {new Date().getFullYear()}</p>
+      </footer>
+    </section>
   );
 }
 

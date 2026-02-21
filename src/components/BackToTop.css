@@ -1,0 +1,44 @@
+.back-to-top {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 50; /* Ensures it stays on top of the background lines */
+}
+
+.top-btn {
+  background-color: rgba(2, 40, 94, 0.6); /* Slightly darker navy blue */
+  color: var(--accent);
+  border: 1px solid rgba(169, 180, 194, 0.2);
+  border-radius: 6px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px); /* Gives it a frosted glass terminal look */
+  transition: all 0.3s ease;
+  animation: fadeInOut 0.3s ease-in-out;
+}
+
+.top-btn:hover {
+  background-color: rgba(169, 180, 194, 0.1);
+  border-color: var(--accent);
+  color: var(--text-main);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(169, 180, 194, 0.15); /* Subtle cyber glow */
+}
+
+/* Smooth fade in when it appears */
+@keyframes fadeInOut {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Move it closer to the edge on mobile screens */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}

@@ -1,135 +1,136 @@
-body, html {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+  --bg-light: #02285e;
+  --bg-dark: #051831;
+  
+  --text-main: #f4f4f9; 
+  --text-muted: #9ba1a6; 
+  --accent: #a9b4c2; 
+  --accent-hover: #c4d0df;
+
+  --accent-2: #6686b3;
+  --accent-2-hover: #5d7aa1;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Odibee Sans", sans-serif;
-  letter-spacing: 2.5px;
-  color: white;
-  background-image: url(../public/mountains.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
 }
 
-a:visited {
-  color: white;
+body {
+  font-family: 'Inter', sans-serif;
+  
+  /* The new gradient background */
+  background: radial-gradient(circle at top center, var(--bg-light) 0%, var(--bg-dark) 100%);
+  background-attachment: fixed; /* Keeps the background anchored when scrolling */
+  
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+
+  overflow-x: hidden;
+  position: relative; /* Needed to anchor the absolute elements below */
 }
 
-h1 {
-  font-size: 7vw;
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h1, h2, span{
-  text-shadow: 3px 3px black;
-}
-
-h2 {
-  margin-top: 7vw;
-}
-
-span {
-  font-size: 4vw;
-}
-
-.header {
+/* Simple minimal Navigation */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1vw;
-  background: linear-gradient(#ffffff71,#ffffff2a,#ffffff0e);
+  padding: 1rem 0 3rem 0;
 }
 
-.head-btn, .logo {
-  margin-right: 5vw;
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.5px;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text-muted);
   text-decoration: none;
-  font-size: 2.5vw;
-  transition: transform 0.2s ease-in-out;
-  display: inline-block;
-  text-shadow: 2px 2px black;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.logo img {
-  width: 5vw;
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text-main);
 }
 
-.head-btn:hover, .logo:hover {
-  transform: scale(1.07);
+.bg-lines-container {
+  position: fixed; /* Changed from absolute so it locks to your screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Locks the height to the window, not the whole scrolling page */
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none; 
+  
+  /* Increased the fade from 10% to 25% for a massive, silky smooth transition */
+  -webkit-mask-image: linear-gradient(
+    to bottom, 
+    transparent 0%, 
+    black 25%, 
+    black 75%, 
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom, 
+    transparent 0%, 
+    black 25%, 
+    black 75%, 
+    transparent 100%
+  );
 }
 
-.head-btn:active {
-  color: #acacac;
+.bg-line-left,
+.bg-line-right {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 12vw; /* Adjust width to make them stretch further inward */
+  max-width: 180px; /* Prevents them from getting too huge on ultrawides */
+  
+  /* Styling the lines */
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2px; /* Thicker, much more visible */
+  opacity: 0.3; /* Bumped up the opacity */
+  
+  /* Adds a faint glow to the lines */
+  filter: drop-shadow(0 0 5px rgba(169, 180, 194, 0.4));
 }
 
-.contact {
-  width: 5vw;
-  margin-right: 1vw; 
+.bg-line-left {
+  left: 2vw;
 }
 
-.resume-img {
-  width: 25vw;
+.bg-line-right {
+  right: 2vw;
+  transform: scaleX(-1); /* Flips the SVG horizontally for perfect framing */
 }
 
-.click-img {
-  position: absolute;
-  top: 3%;
-  right: 7%;
-  width: 15%;
-  transform: translate(20%, -20%) rotate(-30deg);
-  z-index: 10;
-}
-
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 20vw;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 8vw;
-    margin-top: 16vw;
-  }
-
-  .contact {
-    width: 10vw;
-  }
-
-  span {
-    font-size: 8vw;
-    margin-left: 3vw;
-  }
-
-  .resume-img {
-    margin-top: 10vw;
-    width: 80vw;
-  }  
-
-  .click-img {
-    top: 11%;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: center;
-    padding: 2vw;
-  }
-
-  .head-btn{
-    font-size: 7vw;
-    margin-right: 3.5vw;
-    margin-left: 5.5vw;
-  }
-
-  .logo img {
-    width: 10vw;
-    margin-bottom: 2vw;
-  }
-
-  .container {
-    padding: 5vw;
-  }
-
-  .content {
-    text-align: center;
-    margin-top: 5vw;
+@media (max-width: 1250px) {
+  .bg-lines-container {
+    display: none;
   }
 }
