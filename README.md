@@ -10,4 +10,4 @@ You can view the live site [here](https://denisghera.github.io/portfolio/)!
 * **Hosting:** GitHub Pages
 
 ### 🚧 Status
-*In active development.* Currently staging write-ups and preparing the final layout as I await my CPTS certification review.
+*In active development.* Currently staging write-ups and preparing the final layout.
