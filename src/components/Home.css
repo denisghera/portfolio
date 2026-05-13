@@ -17,6 +17,23 @@
   margin-bottom: 2rem;
 }
 
+.intro-badge-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.intro-badge-link:hover {
+  background-color: rgba(169, 180, 194, 0.16);
+  transform: translateY(-1px);
+}
+
+.intro-badge-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .hero-title {
   font-size: clamp(2rem, 3.5vw, 3.5rem);
   font-weight: 700;

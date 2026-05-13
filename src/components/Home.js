@@ -4,7 +4,14 @@ import './Home.css';
 function Home() {
   return (
     <section className="home-container">
-      <div className="intro-badge">CPTS Certified | Penetration Tester</div>
+      <a
+        className="intro-badge intro-badge-link"
+        href="https://profile.hackthebox.com/profile/019cc2b8-20df-7269-a8c7-908b04d0ed0e/certificate/HTBCERT-BB1E9624C4"
+        target="_blank"
+        rel="noreferrer"
+      >
+        CPTS Certified | Penetration Tester
+      </a>
       
       <h1 className="hero-title">
         Hi, I'm Denis. <br />

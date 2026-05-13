@@ -36,7 +36,7 @@ function WriteUps() {
   return (
     <section id="writeups" className="writeups-container">
       <h2 className="section-title">Latest Write-ups</h2>
-      <p className="section-subtitle">Methodology, CTF walkthroughs, and security research.</p>
+      <p className="section-subtitle">Methodology, CTF walkthroughs, and security research. In development...</p>
 
       <div className="writeups-grid">
         {writeups.map((item) => (
